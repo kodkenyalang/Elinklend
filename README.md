@@ -53,7 +53,7 @@ This is a Next.js starter project for a decentralized lending and borrowing plat
 
 Here is an overview of the key files and directories in the project:
 
-```
+
 .
 ├── contracts/
 │   ├── P2PLending.sol      # Main Solidity contract for P2P loans.
@@ -90,7 +90,7 @@ Here is an overview of the key files and directories in the project:
 ├── next.config.ts          # Next.js configuration file.
 ├── tailwind.config.ts      # Tailwind CSS configuration file.
 └── tsconfig.json           # TypeScript configuration file.
-```
+
 
 ### Key Technologies
 
