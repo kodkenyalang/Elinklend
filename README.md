@@ -28,6 +28,77 @@ A **peer-to-peer** and **pools** lending dApp modernised for **Etherlink**.
 ---
 
 ## 📦 Quick Start
+# ELinkLend - A Decentralized Lending Platform
+
+This is a Next.js starter project for a decentralized lending and borrowing platform called ELinkLend, built to run on the Etherlink network. The application demonstrates both pool-based lending and peer-to-peer (P2P) loan functionalities.
+
+## Getting Started
+
+1.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+2.  **Set up environment variables:**
+    Create a `.env.local` file in the root directory and add your Thirdweb client ID:
+    ```
+    NEXT_PUBLIC_THIRDWEB_CLIENT_ID=your_client_id_here
+    ```
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+Here is an overview of the key files and directories in the project:
+
+```
+.
+├── contracts/
+│   ├── P2PLending.sol      # Main Solidity contract for P2P loans.
+│   └── SafeMath.sol        # Utility contract for safe math operations.
+│
+├── public/                 # Static assets (images, fonts, etc.).
+│
+├── src/
+│   ├── app/                # Next.js App Router pages and layouts.
+│   │   ├── (main)/         # Main application pages.
+│   │   │   ├── page.tsx    # Dashboard homepage.
+│   │   │   └── p2p/page.tsx # P2P lending page.
+│   │   ├── layout.tsx      # Root layout for the application.
+│   │   ├── globals.css     # Global styles and Tailwind CSS theme variables.
+│   │   └── app-provider.tsx # Client-side provider setup (e.g., Thirdweb).
+│   │
+│   ├── components/         # Reusable React components.
+│   │   ├── dashboard/      # Components for the main dashboard (Market Overview, etc.).
+│   │   ├── layout/         # Site-wide layout components (Header, Footer).
+│   │   ├── p2p/            # Components for P2P lending (Create Loan, Loan List).
+│   │   └── ui/             # ShadCN UI components (Button, Card, Input, etc.).
+│   │
+│   ├── lib/                # Core application logic, constants, and utilities.
+│   │   ├── abi.ts          # (Placeholder) ABI for the smart contract.
+│   │   ├── constants.ts    # Application-wide constants and mock data.
+│   │   ├── contracts.ts    # Functions for interacting with smart contracts via Thirdweb.
+│   │   ├── thirdweb.ts     # Thirdweb client initialization.
+│   │   ├── types.ts        # TypeScript type definitions for the app.
+│   │   └── utils.ts        # Utility functions (e.g., `cn` for classnames).
+│   │
+│   └── hooks/              # Custom React hooks.
+│       └── use-toast.ts    # Hook for managing toast notifications.
+│
+├── next.config.ts          # Next.js configuration file.
+├── tailwind.config.ts      # Tailwind CSS configuration file.
+└── tsconfig.json           # TypeScript configuration file.
+```
+
+### Key Technologies
+
+-   **Next.js:** React framework for building the user interface.
+-   **Thirdweb:** SDK for interacting with the Etherlink blockchain and smart contracts.
+-   **ShadCN UI & Tailwind CSS:** For styling and building the component library.
+-   **Solidity:** Language for writing the smart contracts.
+-   **Etherlink:** The target blockchain network for the dApp.
 
 ### 1. Prerequisites
 
