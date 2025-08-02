@@ -2,7 +2,7 @@
 # ElinkLend  
 > Vue.js + Solidity + Rust + Goldsky
 
-A **peer-to-peer** and **pools** lending prototype forked  and modernised for **Etherlink Ghostnet**.
+A **peer-to-peer** and **pools** lending dApp modernised for **Etherlink**.
 
 ---
 
