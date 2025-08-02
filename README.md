@@ -46,7 +46,7 @@ This is  a decentralized lending and borrowing platform called ELinkLend, built 
     ```
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
+## 📁Project Structure
 
 Here is an overview of the key files and directories in the project:
 
@@ -214,15 +214,7 @@ https://api.goldsky.com/api/public/project_<id>/subgraphs/p2p-lending-ghostnet/v
 
 ---
 
-## 📁 Repository Layout
 
-```
-├── contracts/           # Foundry project
-├── subgraph/            # Goldsky manifest & mappings
-├── backend/             # Rust Axum API
-├── frontend/            # Vue 3 app
-├── docker-compose.yml   # local stack (optional)
-└── README.md
 ```
 
 ---
