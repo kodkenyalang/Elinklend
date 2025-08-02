@@ -1,8 +1,7 @@
 ```markdown
-# ElinkLend  
-> Vue.js + Solidity + Rust + Goldsky
+# ELinkLend - A Decentralized Lending Platform
 
-A **peer-to-peer** and **pools** lending dApp modernised for **Etherlink**.
+This is  a decentralized lending and borrowing platform called ELinkLend, built to run on the Etherlink network. The application demonstrates both pool-based lending and peer-to-peer (P2P) loan functionalities.
 
 ---
 
@@ -28,9 +27,7 @@ A **peer-to-peer** and **pools** lending dApp modernised for **Etherlink**.
 ---
 
 ## 📦 Quick Start
-# ELinkLend - A Decentralized Lending Platform
 
-This is a Next.js starter project for a decentralized lending and borrowing platform called ELinkLend, built to run on the Etherlink network. The application demonstrates both pool-based lending and peer-to-peer (P2P) loan functionalities.
 
 ## Getting Started
 
