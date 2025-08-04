@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.30;
 
 import "./interfaces/IP2P.sol";
 import "./libraries/Errors.sol";
-import "../contracts-utils/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
 contract P2P is IP2P {
     string public constant name = "P2P";
@@ -117,7 +118,7 @@ contract P2P is IP2P {
         Loan memory loan = loans[_loanId];
 
         // Check if loan exist and if the caller is the borrower
-        if (!isLoanExist[loanId]) revert LoanDoesNotExist();
+        if (!isLoanExist[_loanId]) revert LoanDoesNotExist(); // ✅ Fixed here
         if (loan.borrower != msg.sender) revert NotTheBorrower();
         if (loan.state != LoanState.Accepted) revert NotAcceptedState();
 
@@ -143,14 +144,14 @@ contract P2P is IP2P {
         Loan memory loan = loans[_loanId];
 
         // Check if loan exist
-        if (!isLoanExist[loanId]) revert LoanDoesNotExist();
+        if (!isLoanExist[_loanId]) revert LoanDoesNotExist(); // ✅ Fixed here
         if (loan.state != LoanState.Accepted) revert NotAcceptedState();
 
         // Check if the loan is expired
         if (loan.startTime + loan.duration > block.timestamp) revert NotExpired();
 
         // Change loan state
-        loans[loanId].state = LoanState.Liquidated;
+        loans[_loanId].state = LoanState.Liquidated; // ✅ Fixed here
 
         // Transfer NFT to lender
         IERC721(loan.nft).transferFrom(address(this), loan.lender, loan.nftId);
